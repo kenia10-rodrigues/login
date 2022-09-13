@@ -12,8 +12,9 @@ class _MyLoginState extends State<MyLogin> {
   Widget build(BuildContext context) {
     return Container(
       decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/images/login.png'), fit: BoxFit.cover),
+        color: Colors.purple,
+        // image: DecorationImage(
+        //     image: AssetImage('assets/images/img.png'), fit: BoxFit.cover),
       ),
       child: Scaffold(
         backgroundColor: Colors.transparent,
@@ -21,8 +22,8 @@ class _MyLoginState extends State<MyLogin> {
           Container(
             padding: const EdgeInsets.only(left: 35, top: 80),
             child: const Text(
-              "Welcome\nBack",
-              style: TextStyle(color: Colors.white, fontSize: 33),
+              "NetSaude",
+              style: TextStyle(color: Colors.white, fontSize: 28),
             ),
           ),
           SingleChildScrollView(
@@ -34,9 +35,9 @@ class _MyLoginState extends State<MyLogin> {
               child: Column(children: [
                 TextField(
                   decoration: InputDecoration(
-                    fillColor: Colors.grey.shade100,
+                    fillColor: Colors.purple.shade100,
                     filled: true,
-                    hintText: 'Email',
+                    hintText: 'E-mail',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -48,9 +49,9 @@ class _MyLoginState extends State<MyLogin> {
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    fillColor: Colors.grey.shade100,
+                    fillColor: Colors.purple.shade100,
                     filled: true,
-                    hintText: 'Password',
+                    hintText: 'Senha',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -63,9 +64,9 @@ class _MyLoginState extends State<MyLogin> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      'Sign In',
+                      'Entrar',
                       style: TextStyle(
-                        color: Color(0xff4c505b),
+                        color: Colors.white,
                         fontSize: 27,
                         fontWeight: FontWeight.w700,
                       ),
@@ -87,23 +88,23 @@ class _MyLoginState extends State<MyLogin> {
                 Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      TextButton(
+                      ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'register');
+                          Navigator.pushNamed(context, 'Cadastrar');
                         },
                         child: const Text(
-                          'Sign Up',
+                          'Cadastrar',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color(0xff4c505b),
+                            color: Colors.white,
                           ),
                         ),
                       ),
                       TextButton(
                         onPressed: () {},
                         child: const Text(
-                          'Forgot Password',
+                          'Esqueci a senha',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 18,
