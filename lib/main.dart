@@ -7,11 +7,11 @@ void main() {
   runApp(
     MaterialApp(
         debugShowCheckedModeBanner: false,
-        initialRoute: 'escolher_especialidade',
+        initialRoute: 'register',
         routes: {
           // 'login': (context) => const MyLogin(),
-          // 'register': (context) => const MyRegister(),
-          'escolher_especialidade': (context) => MyApp(),
+          'register': (context) => const MyRegister(),
+        //  'escolher_especialidade': (context) => MyApp(),
         }),
   );
 }
