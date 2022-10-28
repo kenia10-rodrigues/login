@@ -13,15 +13,15 @@ class _MyLoginState extends State<MyLogin> {
     return Container(
       decoration: const BoxDecoration(
         image: DecorationImage(
-            image: AssetImage('assets/images/login.png'), fit: BoxFit.cover),
+            image: AssetImage('assets/images/equipe-medica.png'), fit: BoxFit.cover),
       ),
       child: Scaffold(
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.teal[400],
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 80),
+            padding: const EdgeInsets.only(left: 110, top: 50),
             child: const Text(
-              "Welcome\nBack",
+              "\nNetSaúde",
               style: TextStyle(color: Colors.white, fontSize: 33),
             ),
           ),
@@ -30,13 +30,13 @@ class _MyLoginState extends State<MyLogin> {
               padding: EdgeInsets.only(
                   right: 35,
                   left: 35,
-                  top: MediaQuery.of(context).size.height * 0.5),
+                  top: MediaQuery.of(context).size.height * 0.45),
               child: Column(children: [
                 TextField(
                   decoration: InputDecoration(
-                    fillColor: Colors.grey.shade100,
+                    fillColor: Colors.white,
                     filled: true,
-                    hintText: 'Email',
+                    hintText: 'E-mail',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -48,9 +48,9 @@ class _MyLoginState extends State<MyLogin> {
                 TextField(
                   obscureText: true,
                   decoration: InputDecoration(
-                    fillColor: Colors.grey.shade100,
+                    fillColor: Colors.white,
                     filled: true,
-                    hintText: 'Password',
+                    hintText: 'Senha',
                     border: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                     ),
@@ -63,18 +63,18 @@ class _MyLoginState extends State<MyLogin> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     const Text(
-                      'Sign In',
+                      'Entrar',
                       style: TextStyle(
-                        color: Color(0xff4c505b),
+                        color: Colors.white,
                         fontSize: 27,
                         fontWeight: FontWeight.w700,
                       ),
                     ),
                     CircleAvatar(
                       radius: 30,
-                      backgroundColor: const Color(0xff4c505b),
+                      backgroundColor: Color.fromARGB(255, 223, 224, 230),
                       child: IconButton(
-                        color: Colors.white,
+                        color: Colors.teal[400],
                         onPressed: () {},
                         icon: const Icon(Icons.arrow_forward),
                       ),
@@ -92,22 +92,22 @@ class _MyLoginState extends State<MyLogin> {
                           Navigator.pushNamed(context, 'register');
                         },
                         child: const Text(
-                          'Sign Up',
+                          'Sair',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color(0xff4c505b),
+                            color: Colors.white,
                           ),
                         ),
                       ),
                       TextButton(
                         onPressed: () {},
                         child: const Text(
-                          'Forgot Password',
+                          'Esqueci a senha',
                           style: TextStyle(
                             decoration: TextDecoration.underline,
                             fontSize: 18,
-                            color: Color(0xff4c505b),
+                            color: Colors.white,
                           ),
                         ),
                       ),

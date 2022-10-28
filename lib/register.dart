@@ -11,22 +11,22 @@ class _MyRegisterState extends State<MyRegister> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-            image: AssetImage('assets/images/register.png'), fit: BoxFit.cover),
-      ),
+      // decoration: const BoxDecoration(
+      //   image: DecorationImage(
+      //       image: AssetImage('assets/images/register.png'), fit: BoxFit.cover),
+      // ),
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor: Colors.transparent,
+          backgroundColor: Colors.teal[400],
           elevation: 0,
         ),
-        backgroundColor: Colors.transparent,
+        backgroundColor: Colors.teal[400],
         body: Stack(children: [
           Container(
-            padding: const EdgeInsets.only(left: 35, top: 80),
+            padding: const EdgeInsets.only(left: 100, top: 80),
             child: const Text(
-              "Create\nAccount",
-              style: TextStyle(color: Colors.white, fontSize: 33),
+              "Cadastrar Login",
+              style: TextStyle(color: Colors.white, fontSize: 30),
             ),
           ),
           SingleChildScrollView(
@@ -34,19 +34,19 @@ class _MyRegisterState extends State<MyRegister> {
               padding: EdgeInsets.only(
                   right: 35,
                   left: 35,
-                  top: MediaQuery.of(context).size.height * 0.27),
+                  top: MediaQuery.of(context).size.height * 0.37),
               child: Column(children: [
                 TextField(
                   decoration: InputDecoration(
                     focusedBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
-                      borderSide: const BorderSide(color: Colors.black),
+                      borderSide: const BorderSide(color: Colors.white),
                     ),
                     enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(color: Colors.white),
                     ),
-                    hintText: 'Name',
+                    hintText: 'Nome',
                     hintStyle: const TextStyle(color: Colors.white),
                   ),
                 ),
@@ -63,7 +63,7 @@ class _MyRegisterState extends State<MyRegister> {
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(color: Colors.white),
                     ),
-                    hintText: 'Email',
+                    hintText: 'E-mail',
                     hintStyle: const TextStyle(color: Colors.white),
                   ),
                 ),
@@ -81,7 +81,7 @@ class _MyRegisterState extends State<MyRegister> {
                       borderRadius: BorderRadius.circular(10),
                       borderSide: const BorderSide(color: Colors.white),
                     ),
-                    hintText: 'Password',
+                    hintText: 'Senha',
                     hintStyle: const TextStyle(color: Colors.white),
                   ),
                 ),
@@ -92,7 +92,7 @@ class _MyRegisterState extends State<MyRegister> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const Text(
-                        'Sign In',
+                        'Entrar',
                         style: TextStyle(
                           color: Colors.white,
                           fontSize: 27,
